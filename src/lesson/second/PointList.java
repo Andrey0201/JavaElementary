@@ -1,13 +1,20 @@
 package lesson.second;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class PointList {
     public static void main(String[] args) {
-
-        Point point1 = new Point(0,0);
+        ArrayList<Point> coordinate = new ArrayList<>();
+        Point point = new Point();
         System.out.println("Введите коордитаты точки");
-        int x =point1.getPoint("x:");
-        int y =point1.getPoint("y:");
-        Point point2 = new Point(x,y);
+        int x  = point.getPoint("x:");
+        int y = point.getPoint("y:");
+        coordinate.add(new Point(x,y));
+        System.out.println(point.getX());
+
+
+
 
 
         Circle circle =new Circle(0,0,0);
