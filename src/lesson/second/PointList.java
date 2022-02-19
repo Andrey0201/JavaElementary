@@ -7,7 +7,10 @@ public class PointList {
     public static void main(String[] args) {
         Point point = new Point();
 
+        Circle  circle = new Circle();
         System.out.println(point.getCoordinate());
+        System.out.println(circle.getPoint());
+
 
 
 //
