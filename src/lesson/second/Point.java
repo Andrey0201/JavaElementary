@@ -1,15 +1,16 @@
 package lesson.second;
 
 
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Point {
     private int x;
     private int y;
+    ArrayList<Point>coordinate = new ArrayList<Point>();
 
     public Point() {
-
     }
 
     public Point(int x, int y) {
@@ -19,6 +20,19 @@ public class Point {
 
     }
 
+    public Point getPoint() {
+        System.out.println("Введите коордитаты точки");
+     return new Point(getPoint("x: "), getPoint("y: "));
+
+    }
+
+    public ArrayList<Point> getCoordinate() {
+        coordinate.add(getPoint());
+        while (getAnswer()==1){
+            coordinate.add(getPoint());
+        }
+        return coordinate;
+    }
 
     public int getX() {
         return x;
@@ -69,10 +83,17 @@ public class Point {
                 System.out.println("Повторите ввод (1-да 2- нет) ");
             }
             number = scanner.nextInt();
+
         }
         return number;
     }
 
+    @Override
+    public String toString() {
+        return "Point{" +
+                "coordinate=" + coordinate +
+                '}';
+    }
 }
 
 

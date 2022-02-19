@@ -1,13 +1,17 @@
 package lesson.second;
 
-public class Circle {
-    private int x;
-    private int y;
+import java.util.ArrayList;
+
+public class Circle extends Point {
+
     private int r;
 
+    public Circle() {
+
+    }
+
     public Circle(int x, int y, int r) {
-        this.x = x;
-        this.y = y;
+        super(x, y);
         this.r = r;
     }
 }
