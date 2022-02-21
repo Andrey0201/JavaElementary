@@ -1,10 +1,12 @@
-package lesson.second;
+package lesson.second.model;
+
+import lesson.second.view.View;
 
 import java.util.ArrayList;
 
 public class PointList   {
 
-    private ArrayList<Point> points;
+   private ArrayList<Point> points = new ArrayList<>();
     View view;
 
     public PointList(){

@@ -1,4 +1,4 @@
-package lesson.second;
+package lesson.second.units;
 
 import java.util.Scanner;
 

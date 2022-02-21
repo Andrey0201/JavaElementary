@@ -1,9 +1,5 @@
-package lesson.second;
+package lesson.second.model;
 
-
-
-import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Point {
     private int x;

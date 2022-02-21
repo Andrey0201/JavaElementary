@@ -1,4 +1,8 @@
-package lesson.second;
+package lesson.second.controller;
+
+import lesson.second.model.Circle;
+import lesson.second.model.Point;
+import lesson.second.model.PointList;
 
 public class PointController {
 

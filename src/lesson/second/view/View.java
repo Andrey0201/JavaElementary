@@ -1,4 +1,8 @@
-package lesson.second;
+package lesson.second.view;
+
+import lesson.second.model.Circle;
+import lesson.second.model.Point;
+import lesson.second.units.Validator;
 
 import java.util.Scanner;
 
@@ -59,7 +63,7 @@ public class View {
         System.out.print(nameY);
         y = validator.validateInputPoints(scanner);
         point.setY(y);
-        return new Point();
+        return  new Point(x,y);
     }
 
     public int getAnswer() {

@@ -1,8 +1,7 @@
-package lesson.second;
+package lesson.second.model;
 
 
-import java.sql.SQLOutput;
-import java.util.ArrayList;
+import lesson.second.model.Point;
 
 public class Circle extends Point {
 
@@ -38,7 +37,7 @@ public class Circle extends Point {
     public String toString() {
         return super.toString();
     }
-}
+
 
 //    @Override
 //    public Point getPoint() {
@@ -46,13 +45,10 @@ public class Circle extends Point {
 //        return new Circle(getPoints("x: "), getPoints("y: "));
 //    }
 //
-//    public void foo() {
-//        Point p = new Point().getPoint();
-//        Point circleCenter = new Circle().getPoint();
-//        double radius = 2;
-//
-//        System.out.println(p.distance(circleCenter) < radius ? p.getX() + p.getY() : "Outside");
-//    }
+    public void foo(Point point,Circle circle,int r){
+
+    System.out.println(point.distance(circle) < r ? point.getX() +"|" + point.getY() : "Outside");
+    }}
 //
 //    @Override
 //    double distance(Point p) {
