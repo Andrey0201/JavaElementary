@@ -1,5 +1,7 @@
 package lesson.second;
 
+
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 
 public class Circle extends Point {
@@ -19,44 +21,17 @@ public class Circle extends Point {
         super(x, y);
     }
 
-    @Override
-    public Point getPoint() {
-        return super.getPoint();
+    public int getR() {
+        return r;
+    }
+
+    public void setR(int r) {
+        this.r = r;
     }
 
     @Override
-    public ArrayList<Point> getCoordinate() {
-        return super.getCoordinate();
-    }
-
-    @Override
-    public int getX() {
-        return super.getX();
-    }
-
-    @Override
-    public void setX(int x) {
-        super.setX(x);
-    }
-
-    @Override
-    public int getY() {
-        return super.getY();
-    }
-
-    @Override
-    public void setY(int y) {
-        super.setY(y);
-    }
-
-    @Override
-    public int getPoint(String pointCoordinate) {
-        return super.getPoint(pointCoordinate);
-    }
-
-    @Override
-    public int getAnswer() {
-        return super.getAnswer();
+    public double distance(Point point) {
+        return super.distance(point);
     }
 
     @Override
@@ -64,3 +39,30 @@ public class Circle extends Point {
         return super.toString();
     }
 }
+
+//    @Override
+//    public Point getPoint() {
+//        System.out.println("Введите кординаты центра окружности ");
+//        return new Circle(getPoints("x: "), getPoints("y: "));
+//    }
+//
+//    public void foo() {
+//        Point p = new Point().getPoint();
+//        Point circleCenter = new Circle().getPoint();
+//        double radius = 2;
+//
+//        System.out.println(p.distance(circleCenter) < radius ? p.getX() + p.getY() : "Outside");
+//    }
+//
+//    @Override
+//    double distance(Point p) {
+//        return Math.sqrt(Math.pow((p.getX() - getX()), 2) + Math.pow((p.getY() - getY()), 2));
+//    }
+//
+//    @Override
+//    public String toString() {
+//        return "Circle{" +
+//                "coordinate=" + getCoordinate() +
+//                "} " + super.toString();
+//    }
+//}

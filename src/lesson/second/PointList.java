@@ -1,26 +1,56 @@
 package lesson.second;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
-public class PointList {
-    public static void main(String[] args) {
-        Point point = new Point();
+public class PointList   {
 
-        Circle  circle = new Circle();
-        System.out.println(point.getCoordinate());
-        System.out.println(circle.getPoint());
+    private ArrayList<Point> points;
+    View view;
+
+    public PointList(){
+
+    }
+    public PointList(View view){
+        this.view = view;
+
+    }
+
+    public PointList(ArrayList<Point> points, View view) {
+        this.points = points;
+        this.view = view;
+    }
+
+    public PointList(ArrayList<Point> points) {
+        this.points = points;
+    }
+
+    public ArrayList<Point> getPoints() {
+        return points;
+    }
+    public void setPoints(ArrayList<Point> points) {
+        this.points = points;
+    }
 
 
+        public ArrayList<Point> addPoints() {
+            points.add(view.getNewPoint());
+            while (view.getAnswer()==1){
+                points.add(view.getNewPoint());
+            }
+            return points;
+        }
+
+    @Override
+    public String toString() {
+        return "PointList{" +
+                "points=" + points +
+                '}';
+    }
+}
 
 //
 
 
-
-
-
-    }
-}
 //    // метод вычисляющий расстояние между точками
 //    public double length(Point p) {
 //        return Math.sqrt( Math.pow(p.x-x,2) + Math.pow(p.y-y,2) )

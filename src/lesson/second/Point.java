@@ -8,7 +8,6 @@ import java.util.Scanner;
 public class Point {
     private int x;
     private int y;
-    ArrayList<Point>coordinate = new ArrayList<Point>();
 
     public Point() {
     }
@@ -17,21 +16,6 @@ public class Point {
         this.x = x;
         this.y = y;
 
-
-    }
-
-    public Point getPoint() {
-        System.out.println("Введите коордитаты точки");
-     return new Point(getPoint("x: "), getPoint("y: "));
-
-    }
-
-    public ArrayList<Point> getCoordinate() {
-        coordinate.add(getPoint());
-        while (getAnswer()==1){
-            coordinate.add(getPoint());
-        }
-        return coordinate;
     }
 
     public int getX() {
@@ -50,51 +34,20 @@ public class Point {
         this.y = y;
     }
 
-    public int getPoint(String pointCoordinate) {
-        Scanner scanner = new Scanner(System.in);
 
-        System.out.print(pointCoordinate);
-        while (!scanner.hasNextInt()) {
-            String str = scanner.nextLine().trim();
-            System.out.printf("\"%s\" - не число или не целое число!\n", str);
-            System.out.print("Повторите ввод:\n" + pointCoordinate);
+    public double distance(Point point) {
+        return Math.sqrt(Math.pow((point.getX() - getX()), 2) + Math.pow((point.getY() - getY()), 2));
         }
-        return scanner.nextInt();
-
-    }
-
-
-    public int getAnswer() {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Желаете добавить еще (1-да 2- нет)?");
-        while (!scanner.hasNextInt()) {
-            String str = scanner.nextLine().trim();
-            System.out.printf("\"%s\" - не число или не целое число!\n", str);
-            System.out.println("Повторите ввод (1-да 2- нет) ");
-        }
-
-        int number = scanner.nextInt();
-        while (number < 1 || number > 2) {
-            System.out.println("Неверное значение! Повторите ввод (1-да 2- нет)");
-            while (!scanner.hasNextInt()) {
-                String str = scanner.next().trim();
-                System.out.printf("\"%s\" - не число или не целое число!\n", str);
-                System.out.println("Повторите ввод (1-да 2- нет) ");
-            }
-            number = scanner.nextInt();
-
-        }
-        return number;
-    }
 
     @Override
     public String toString() {
         return "Point{" +
-                "coordinate=" + coordinate +
+                "x=" + x +
+                ", y=" + y +
                 '}';
     }
 }
+
 
 
 
