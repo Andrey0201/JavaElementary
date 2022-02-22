@@ -50,7 +50,7 @@ public class PointList {
         return points;
     }
 
-    public ArrayList<Point> addNewPoints(Circle circle) {
+    public ArrayList<Point> addNewPoints() {
         ArrayList<Point>points1 = new ArrayList<Point>();
         for ( Point i:points) {
          if(circle.pointInCircle(i,circle) !=null){

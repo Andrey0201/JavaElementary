@@ -1,11 +1,5 @@
 package lesson.second.model;
 
-
-import lesson.second.model.Point;
-import lesson.second.view.View;
-
-import java.util.ArrayList;
-
 public class Circle extends Point {
 
     private int r;
@@ -38,7 +32,7 @@ public class Circle extends Point {
 
     public  Point pointInCircle(Point point, Circle circle) {
         Point point1 = null;
-        if (point.distance(circle) > r){
+        if (point.distance(circle) < r){
             point1 = point;
         }
         return  point1 ;
