@@ -37,10 +37,7 @@ public class Circle extends Point {
         }
         return  point1 ;
     }
-//
-//    public void foo(Point point,Circle circle){
-//        System.out.println(point.distance(circle) < r ? point.getX() +"|" + point.getY() : "Outside");
-//    }
+
 
     @Override
     public String toString() {

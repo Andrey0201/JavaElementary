@@ -11,7 +11,6 @@ public class View {
     int x;
     int y;
     int r;
-    Scanner scanner;
     String title;
     String nameX;
     String nameY;

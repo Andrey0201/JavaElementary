@@ -5,7 +5,6 @@ import lesson.second.model.Circle;
 import lesson.second.model.Point;
 import lesson.second.model.PointList;
 import lesson.second.view.View;
-
 import java.util.ArrayList;
 
 public class PointController {

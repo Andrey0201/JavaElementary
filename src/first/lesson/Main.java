@@ -3,7 +3,7 @@ package first.lesson;
 public class Main {
 
     public static void main(String[] args) {
-        Human human1 = new Human("Пупкин", "Иван" );
+        Human human1 = new Human("Пупкин", "Иван","Васильевич" );
         human1.getFullName();
         human1.getShortName();
     }
