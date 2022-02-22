@@ -39,16 +39,16 @@ public class View {
         nameX = "x:";
         System.out.print(nameX);
         x = validator.validateInputPoints(scanner);
-        point.setX(x);
+        circle.setX(x);
         nameY = "y:";
         System.out.print(nameY);
         y = validator.validateInputPoints(scanner);
-        point.setY(y);
+        circle.setY(y);
         title = "Введите радиус окружности: ";
         System.out.println(title);
         r = validator.validateInputRadius(scanner);
         circle.setR(r);
-        return new Circle();
+        return new Circle(x,y);
     }
 
     public Point getNewPoint() {
